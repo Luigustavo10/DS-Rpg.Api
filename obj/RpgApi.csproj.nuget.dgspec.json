@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\2°Semestre\\DS\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj": {}
+    "D:\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj": {}
   },
   "projects": {
-    "F:\\2°Semestre\\DS\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj": {
+    "D:\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\2°Semestre\\DS\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj",
+        "projectUniqueName": "D:\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj",
         "projectName": "RpgApi",
-        "projectPath": "F:\\2°Semestre\\DS\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj",
+        "projectPath": "D:\\2DS-Luis-Carlos\\RpgApi\\RpgApi.csproj",
         "packagesPath": "C:\\Users\\EtecHAS\\.nuget\\packages\\",
-        "outputPath": "F:\\2°Semestre\\DS\\2DS-Luis-Carlos\\RpgApi\\obj\\",
+        "outputPath": "D:\\2DS-Luis-Carlos\\RpgApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EtecHAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,11 +44,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

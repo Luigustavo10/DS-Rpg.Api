@@ -16,10 +16,74 @@ namespace RpgApi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("RpgApi.Models.Armas", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Dano")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Armas");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Dano = 47,
+                            Nome = "AK-47"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Dano = 34,
+                            Nome = "Mp-40"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Dano = 237,
+                            Nome = "AWP"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Dano = 12,
+                            Nome = "USP"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Dano = 90,
+                            Nome = "Escopeta"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Dano = 24,
+                            Nome = "MP5"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Dano = 45,
+                            Nome = "Famas"
+                        });
+                });
 
             modelBuilder.Entity("RpgApi.Models.Personagem", b =>
                 {

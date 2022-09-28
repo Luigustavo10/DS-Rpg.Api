@@ -27,11 +27,11 @@ namespace RpgApi.Controllers
             {
                 Personagem p = await _context.Personagens.FirstOrDefaultAsync(pBusca => pBusca.Id == id);
 
-                return Ok (p);
+                return Ok(p);
             }
             catch (Exception ex)
             {
-                return BadRequest (ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -56,13 +56,13 @@ namespace RpgApi.Controllers
         {
             try
             {
-                if(novoPersonagem.PontosVida > 100)
+                if (novoPersonagem.PontosVida > 100)
                 {
-                    throw new Exception ("Ponto de vida nao pode ser maior que 100");
+                    throw new Exception("Ponto de vida nao pode ser maior que 100");
                 }
                 await _context.Personagens.AddAsync(novoPersonagem);
                 await _context.SaveChangesAsync();
-                
+
                 return Ok(novoPersonagem.Id);
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace RpgApi.Controllers
         {
             try
             {
-                if(novoPersonagem.PontosVida > 100)
+                if (novoPersonagem.PontosVida > 100)
                 {
                     throw new Exception("Pontos de vida não pode ser maior que 100");
                 }
@@ -89,6 +89,26 @@ namespace RpgApi.Controllers
             }
             catch (Exception ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                Personagem pRemover = await _context.Personagens.FirstOrDefaultAsync(pRemover => pRemover.Id == id);
+
+                _context.Personagens.Remove(pRemover);
+                int linhasAfetadas = await _context.SaveChangesAsync();
+
+                return Ok(linhasAfetadas);
+
+            }
+            catch (Exception ex)
+            {
+
                 return BadRequest(ex.Message);
             }
         }
