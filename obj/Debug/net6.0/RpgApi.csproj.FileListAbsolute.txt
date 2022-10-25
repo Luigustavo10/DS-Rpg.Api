@@ -180,3 +180,4 @@ D:\2DS-Luis-Carlos\RpgApi\bin\Debug\net6.0\publish\appsettings.Development.json
 D:\2DS-Luis-Carlos\RpgApi\bin\Debug\net6.0\publish\appsettings.json
 D:\2DS-Luis-Carlos\RpgApi\bin\Debug\net6.0\publish\RpgApi.deps.json
 D:\2DS-Luis-Carlos\RpgApi\bin\Debug\net6.0\publish\RpgApi.runtimeconfig.json
+D:\2DS-Luis-Carlos\RpgApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll

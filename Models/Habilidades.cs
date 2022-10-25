@@ -1,0 +1,14 @@
+using System.Collections.Generic;
+namespace RpgApi.Models
+
+{
+    public class Habilidades
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public int Dano { get; set; }
+         public List<PersonagemHabilidade> PersonagemHabilidades {get; set;}
+
+    }
+    
+}

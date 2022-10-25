@@ -25,7 +25,12 @@ namespace RpgApi.Controllers
         {
             try
             {
-                Personagem p = await _context.Personagens.FirstOrDefaultAsync(pBusca => pBusca.Id == id);
+                Personagem p = await _context.Personagens
+                .Include(ar => ar.Armas)
+                .Include(us => us.Usuario)
+                .Include(ph => ph.PersonagemHabilidade)
+                .ThenInclude(h => h.Habilidade)
+                .FirstOrDefaultAsync(pBusca => pBusca.Id == id);
 
                 return Ok(p);
             }
@@ -112,5 +117,7 @@ namespace RpgApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        
+
     }
 }
